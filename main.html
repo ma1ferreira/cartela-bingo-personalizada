@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+     <meta charset="utf-8">
+    <title>cartela bingo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<header class="site-header">
+    <nav class="main-nav" aria-label="Navegação principal">
+        <ul class="nav-list">
+            <li><a href="#">cartela bingo</a></li>
+            <li><a href="#">galeria</a></li>
+            <li><a href="#">ajuda</a></li>
+            <li><a href="#">sobre</a></li>
+            <li><button type="button">idioma</button></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="main-content">
+
+    <aside class="settings-panel" id="settings-panel" aria-hidden="false">
+        <form class="settings-form">
+            <h1 class="settings-title">configurações</h1>
+
+            <div class="settings-form-options">
+             <label for="bingo-title">título:</label>
+                <input type="text" id="bingo-title" name="bingo-title" placeholder="encontro anos 80">
+            </div>
+
+            <div class="settings-form-options">
+                <label for="tamanho-grade">tamanho da grade:</label>
+                <label><input type="radio" name="grid-size" value="3" checked>3x3</label>
+                <label><input type="radio" name="grid-size" value="5">5x5</label>
+            </div>
+                
+            <div class="settings-form-options">
+                <label for="bingo-bg-color">cor de fundo:</label>
+                <label><input type="color" id="bingo-bg-color" name="bingo-bg-color"> #000000</label>
+            </div>
+
+            <div class="settings-form-options">
+                <label for="bingo-grid-color">cor da grade:</label>
+                <label><input type="color" id="bingo-grid-color" name="bingo-grid-color"> #000000</label>
+            </div>
+
+            <div class="settings-form-options">
+                <label for="bingo-font-color">cor da fonte:</label>
+                <label><input type="color" id="bingo-font-color" name="bingo-font-color"> #000000</label>
+            </div>
+
+            <div class="settings-form-options">
+                <label for="font-size">tamanho da fonte:</label>
+                <select id="font-size" name="font-size">
+                    <option value="small">pequena</option>
+                    <option value="medium">média</option>
+                    <option value="large">grande</option>
+                </select>
+            </div>
+
+            <div class="settings-form-options">
+                <label for="stickers-input">adicionar adesivos:</label>
+                <input type="file" id="sticker-input" name="sticker-input" accept=".jpg,.png">
+            </div>
+
+                <button type="button" class="btn-reset">restaurar padrão acessível</button>
+        </form>
+    </aside>
+
+    <section class="bingo-area">
+
+        <header class="bingo-header">
+            <h1 class="bingo-title">título</h1>
+            <h2 class="bingo-label">BINGO</h2>
+        </header>
+
+        <section class="bingo-grid" id="bingo-grid" aria-label="Grade do bingo"></section>
+
+        <div class="bingo-actions">
+            <button type="button">download png</button>
+            <button type="button">download psd</button>
+            <button type="button" id="toggle-settings">configurações</button>
+        </div>
+
+    </section>
+
+
+</main>
+</body>
+</html>
