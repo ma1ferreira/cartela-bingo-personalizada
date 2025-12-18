@@ -4,6 +4,7 @@
 <head>
      <meta charset="utf-8">
     <title>cartela bingo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -12,21 +13,43 @@
 <header class="site-header">
     <nav class="main-nav" aria-label="Navegação principal">
         <ul class="nav-list">
-            <li><a href="#">cartela bingo</a></li>
-            <li><a href="#">galeria</a></li>
-            <li><a href="#">ajuda</a></li>
-            <li><a href="#">sobre</a></li>
-            <li><button type="button">idioma</button></li>
+            <li class="nav-logo"><a href="#">cartela bingo</a></li>
+
+            <li class="nav-center">
+                <a href="#">galeria</a>
+                <a href="#">ajuda</a>
+                <a href="#">sobre</a>
+            </li>
+
+            <li class="nav-btn-lang">
+                <select name="lang" aria-label="Selecionar idioma">
+                    <option value="portuguese">portuguese</option>
+                    <option value="english">english</option>
+                    <option value="spanish">spanish</option>
+                </select>
+            </li>
         </ul>
     </nav>
 </header>
 
 <main class="main-content">
 
-    <aside class="settings-panel" id="settings-panel" aria-hidden="false">
-        <form class="settings-form">
-            <h1 class="settings-title">configurações</h1>
+    <section class="bingo-area">
+        <h1 class="bingo-title">título</h1>
+        <h2 class="bingo-subtitle">BINGO</h2>
 
+        <div class="bingo-grid" id="bingo-grid" aria-label="Grade do bingo"></div>
+
+        <div class="bingo-actions">
+            <button type="button">download png</button>
+            <button type="button">download psd</button>
+            <button type="button" id="toggle-settings">configurações</button>
+        </div>
+    </section>
+
+    <aside class="settings-panel" id="settings-panel" aria-hidden="false">
+        <h2>configurações</h2>
+        <form class="settings-form">
             <div class="settings-form-options">
              <label for="bingo-title">título:</label>
                 <input type="text" id="bingo-title" name="bingo-title" placeholder="encontro anos 80">
@@ -70,23 +93,6 @@
                 <button type="button" class="btn-reset">restaurar padrão acessível</button>
         </form>
     </aside>
-
-    <section class="bingo-area">
-
-        <header class="bingo-header">
-            <h1 class="bingo-title">título</h1>
-            <h2 class="bingo-label">BINGO</h2>
-        </header>
-
-        <section class="bingo-grid" id="bingo-grid" aria-label="Grade do bingo"></section>
-
-        <div class="bingo-actions">
-            <button type="button">download png</button>
-            <button type="button">download psd</button>
-            <button type="button" id="toggle-settings">configurações</button>
-        </div>
-
-    </section>
 
 
 </main>

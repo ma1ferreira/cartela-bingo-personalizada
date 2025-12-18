@@ -1,3 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+body {
+    margin: 0px;
+    background-color: #FFF0DD;
+    font-family: "Inter", sans-serif;
+}
+
 /* nav, header */
 .site-header {
     background-color: #2F4B5C;
@@ -7,8 +16,25 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
+    padding: 24px;
+    margin: 0px;
     background-color: #2F4B5C;
+}
+
+.nav-logo a {
+    font-family: "Instrument Serif", serif;
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #FCFCFC;
+    text-decoration: none;
+    margin-left: 30px;
+}
+
+.nav-center {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
 }
 
 .main-nav a {
@@ -20,3 +46,30 @@ ul {
     list-style-type: none;
 }
 
+.nav-btn-lang select {
+    font-family: "Inter", sans-serif;
+    background-color: #2F4B5C;
+    color: #FFFFFF;
+    border: none;
+    outline: none;
+    padding: 4px 6px;
+    cursor: pointer;
+    margin-right: 50px;
+}
+
+    /*elemento pai: main*/ 
+main { 
+    display: flex; 
+    justify-content: space-evenly; 
+    align-items: center; 
+} 
+
+    /*aside: painel de configurações*/ 
+.settings-panel { 
+    background-color: white; 
+} 
+
+    /*section: área do bingo*/ 
+.bingo-area { 
+    background-color: white; 
+}
