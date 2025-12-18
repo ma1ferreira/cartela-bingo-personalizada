@@ -1,4 +1,4 @@
-<h3>projeto em desenvolvimento</h3>
+<h3>⚠️ projeto em desenvolvimento</h3>
 
 um site para criar cartelas de bingo personalizadas.
 permite personalizar título, tamanho da grade (3×3 ou 5×5), cores, tamanho da fonte e adicionar adesivos ao design, com foco em acessibilidade e layout simples.
