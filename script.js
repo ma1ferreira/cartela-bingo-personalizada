@@ -51,6 +51,12 @@ bgColorInput.addEventListener("input", () => {
   bingoArea.style.backgroundColor = bgColorInput.value;
 });
 
+let bgColorValue = document.getElementById("bg-color-value");
+
+bgColorInput.addEventListener("input", () => {
+  bgColorValue.textContent = bgColorInput.value.toUpperCase();
+});
+
 gridColorInput.addEventListener("input", () => {
   let titleMargin = document.querySelectorAll(".bingo-title");
   titleMargin.forEach((title) => {
@@ -63,12 +69,25 @@ gridColorInput.addEventListener("input", () => {
   });
 });
 
+let gridColorValue = document.getElementById("grid-color-value");
+
+gridColorInput.addEventListener("input", () => {
+  gridColorValue.textContent = gridColorInput.value.toUpperCase();
+});
+
 fontColorInput.addEventListener("input", () => {
   let cells = bingoGrid.querySelectorAll(".bingo-cell");
   cells.forEach((cell) => {
     cell.style.color = fontColorInput.value;
   });
 });
+
+let fontColorValue = document.getElementById("font-color-value");
+
+fontColorInput.addEventListener("input", () => {
+  fontColorValue.textContent = fontColorInput.value.toUpperCase();
+});
+
 
 /* escolha do tamanho da fonte */
 let fontSizeSelect = document.getElementById("font-size");
