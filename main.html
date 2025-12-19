@@ -1,105 +1,106 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+    <!DOCTYPE html>
+    <html lang="pt-br">
 
-<head>
-     <meta charset="utf-8">
-    <title>cartela bingo</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-</head>
+    <head>
+        <meta charset="utf-8">
+        <title>cartela bingo</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <script src="script.js" defer></script>
+    </head>
 
-<body>
+    <body>
 
-<header class="site-header">
-    <nav class="main-nav" aria-label="Navegação principal">
-        <ul class="nav-list">
-            <li class="nav-logo"><a href="#">cartela bingo</a></li>
+    <header class="site-header">
+        <nav class="main-nav" aria-label="Navegação principal">
+            <ul class="nav-list">
+                <li class="nav-logo"><a href="#">cartela bingo</a></li>
 
-            <li class="nav-center">
-                <a href="#">galeria</a>
-                <a href="#">ajuda</a>
-                <a href="#">sobre</a>
-            </li>
+                <li class="nav-center">
+                    <a href="#">galeria</a>
+                    <a href="#">ajuda</a>
+                    <a href="#">sobre</a>
+                </li>
 
-            <li class="nav-btn-lang">
-                <select name="lang" aria-label="Selecionar idioma">
-                    <option value="portuguese">portuguese</option>
-                    <option value="english">english</option>
-                    <option value="spanish">spanish</option>
-                </select>
-            </li>
-        </ul>
-    </nav>
-</header>
+                <li class="nav-btn-lang">
+                    <select name="lang" aria-label="Selecionar idioma">
+                        <option value="portuguese">portuguese</option>
+                        <option value="english">english</option>
+                        <option value="spanish">spanish</option>
+                    </select>
+                </li>
+            </ul>
+        </nav>
+    </header>
 
-<main class="main-content">
+    <main class="main-content">
 
-    <section class="bingo-area">
-        <h1 class="bingo-title">título</h1>
+        <section class="bingo-area">
+            <h1 class="bingo-title">título</h1>
 
-        <div class="bingo-grid" id="bingo-grid" aria-label="Grade do bingo"></div>
+            <div class="bingo-grid" id="bingo-grid" aria-label="Grade do bingo"></div>
 
-        <div class="bingo-actions">
-            <button type="button">download png</button>
-            <button type="button">download psd</button>
-            <button type="button" id="toggle-settings">configurações</button>
-        </div>
-    </section>
-
-    <aside class="settings-panel" id="settings-panel" aria-hidden="false">
-        <h2>configurações</h2>
-        <form class="settings-form">
-            <div class="settings-form-options">
-             <label for="bingo-title">título:</label>
-                <input class="bingo-title-input" type="text" id="bingo-title" name="bingo-title" placeholder="encontro anos 80">
+            <div class="bingo-actions">
+                <button type="button">download png</button>
+                <button type="button">download psd</button>
+                <button type="button" id="toggle-settings">configurações</button>
             </div>
+        </section>
 
-            <div class="settings-form-options">
-                <label for="tamanho-grade">definir grade:</label>
-                <label><input class="grid-size-input" type="radio" name="grid-size" value="3" checked>3x3</label>
-                <label><input class="grid-size-input" type="radio" name="grid-size" value="5">5x5</label>
-            </div>
-                
-            <div class="settings-form-options">
-                <label for="bingo-bg-color">cor de fundo:</label>
-                <label><input class="bg-color-input" type="color" value="#FFFFFF" id="bingo-bg-color" name="bingo-bg-color"> #000000</label>
-            </div>
+        <aside class="settings-panel" id="settings-panel" aria-hidden="false">
+            <h2>configurações</h2>
+            <form class="settings-form">
+                <div class="settings-form-options">
+                <label for="bingo-title">título:</label>
+                    <input class="bingo-title-input" type="text" id="bingo-title" name="bingo-title" placeholder="encontro anos 80">
+                </div>
 
-            <div class="settings-form-options">
-                <label for="bingo-grid-color">cor da grade:</label>
-                <label><input class="grid-color-input" type="color" value="#3d3d3d" id="bingo-grid-color" name="bingo-grid-color"> #000000</label>
-            </div>
+                <div class="settings-form-options">
+                    <label for="tamanho-grade">definir grade:</label>
+                    <label><input class="grid-size-input" type="radio" name="grid-size" value="3" checked>3x3</label>
+                    <label><input class="grid-size-input" type="radio" name="grid-size" value="5">5x5</label>
+                </div>
+                    
+                <div class="settings-form-options">
+                    <label for="bingo-bg-color">cor de fundo:</label>
+                    <label><input class="bg-color-input" type="color" value="#FFFFFF" id="bingo-bg-color" name="bingo-bg-color"> #000000</label>
+                </div>
 
-            <div class="settings-form-options">
-                <label for="bingo-font-color">cor da fonte:</label>
-                <label><input class="font-color-input" type="color" value="#2f4b5c" id="bingo-font-color" name="bingo-font-color"> #000000</label>
-            </div>
+                <div class="settings-form-options">
+                    <label for="bingo-grid-color">cor da grade:</label>
+                    <label><input class="grid-color-input" type="color" value="#3d3d3d" id="bingo-grid-color" name="bingo-grid-color"> #000000</label>
+                </div>
 
-            <div class="settings-form-options">
-                <label for="font-size">tamanho da fonte:</label>
-                <select id="font-size" name="font-size">
-                    <option value="small">pequena</option>
-                    <option value="medium">média</option>
-                    <option value="large">grande</option>
-                </select>
-            </div>
+                <div class="settings-form-options">
+                    <label for="bingo-font-color">cor da fonte:</label>
+                    <label><input class="font-color-input" type="color" value="#2f4b5c" id="bingo-font-color" name="bingo-font-color"> #000000</label>
+                </div>
 
-            <div class="settings-form-options">
-                <label for="sticker-input">adicionar adesivos:</label>
-                <input class="sticker-input" type="file" id="sticker-input" name="sticker-input" accept=".jpg,.png">
-                <label for="sticker-file-upload" class="custom-file-label">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-folder2" viewBox="0 0 16 16">
-                    <path d="M1 3.5A1.5 1.5 0 0 1 2.5 2h2.764c.958 0 1.76.56 2.311 1.184C7.985 3.648 8.48 4 9 4h4.5A1.5 1.5 0 0 1 15 5.5v7a1.5 1.5 0 0 1-1.5 1.5h-11A1.5 1.5 0 0 1 1 12.5zM2.5 3a.5.5 0 0 0-.5.5V6h12v-.5a.5.5 0 0 0-.5-.5H9c-.964 0-1.71-.629-2.174-1.154C6.374 3.334 5.82 3 5.264 3zM14 7H2v5.5a.5.5 0 0 0 .5.5h11a.5.5 0 0 0 .5-.5z"/>
-                    </svg>
-                </label>
-                <span id="sticker-file-upload"></span>
-            </div>
+                <div class="settings-form-options">
+                    <label for="font-size">tamanho da fonte:</label>
+                    <select id="font-size" name="font-size">
+                        <option value="small">pequena</option>
+                        <option value="medium">média</option>
+                        <option value="large">grande</option>
+                    </select>
+                </div>
 
-            <button type="button" class="btn-reset">restaurar padrão acessível</button>
-        </form>
-    </aside>
+                <div class="settings-form-options">
+                    <label for="sticker-input">adicionar adesivos:</label>
+                    <input class="sticker-input" type="file" id="sticker-input" name="sticker-input" accept=".jpg,.png">
+                    <label for="sticker-file-upload" class="custom-file-label">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-folder2" viewBox="0 0 16 16">
+                        <path d="M1 3.5A1.5 1.5 0 0 1 2.5 2h2.764c.958 0 1.76.56 2.311 1.184C7.985 3.648 8.48 4 9 4h4.5A1.5 1.5 0 0 1 15 5.5v7a1.5 1.5 0 0 1-1.5 1.5h-11A1.5 1.5 0 0 1 1 12.5zM2.5 3a.5.5 0 0 0-.5.5V6h12v-.5a.5.5 0 0 0-.5-.5H9c-.964 0-1.71-.629-2.174-1.154C6.374 3.334 5.82 3 5.264 3zM14 7H2v5.5a.5.5 0 0 0 .5.5h11a.5.5 0 0 0 .5-.5z"/>
+                        </svg>
+                    </label>
+                    <span id="sticker-file-upload"></span>
+                </div>
+
+                <button type="button" class="btn-reset">restaurar padrão acessível</button>
+            </form>
+        </aside>
 
 
-</main>
-</body>
-</html>
+    </main>
+    </body>
+    </html>

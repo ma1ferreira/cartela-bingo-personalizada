@@ -210,3 +210,20 @@ h2 {
     margin-top: 10px;
     margin-right: 150px;
 }
+
+.bingo-grid {
+    width: 100%;
+    max-width: 460px;
+    max-height: 460px;
+    display: grid;
+    margin: 10px auto;
+}
+
+.bingo-cell {
+    border: 1px solid #3d3d3d;
+    background-color: #ffffff;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
