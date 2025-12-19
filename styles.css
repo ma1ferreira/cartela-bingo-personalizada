@@ -79,9 +79,9 @@ main {
     font-size: 20px;
     font-weight: normal;
     text-align: center;
-    margin-top: 20px;
-    border: 1px solid #a7a7a7;
-    margin: 10px;
+    border: 2px solid #3d3d3d;
+    margin-left: 25px;
+    margin-right: 25px;
 }
 
 .bingo-actions {
@@ -209,10 +209,14 @@ button {
 }
 
 .bingo-cell {
-    border: 1px solid #3d3d3d;
-    background-color: #ffffff;
+    border: 2px solid #3d3d3d;
+    background-color: transparent;
     aspect-ratio: 1 / 1;
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
+    cursor: text;
+    word-break: break-word;
+    overflow: hidden;
 }

@@ -27,7 +27,7 @@ function createBingoGrid(size) {
   for (let i = 0; i < totalCells; i++) {
     let cell = document.createElement("div");
     cell.classList.add("bingo-cell");
-    cell.textContent = "";
+    cell.contentEditable = true;
     bingoGrid.appendChild(cell);
   }
 }
@@ -40,3 +40,53 @@ gridSizeInputs.forEach((input) => {
 });
 
 createBingoGrid(3);
+
+/* escolha das cores */
+let bgColorInput = document.getElementById("bingo-bg-color");
+let gridColorInput = document.getElementById("bingo-grid-color");
+let fontColorInput = document.getElementById("bingo-font-color");
+
+bgColorInput.addEventListener("input", () => {
+  let bingoArea = document.getElementById("bingo-area");
+  bingoArea.style.backgroundColor = bgColorInput.value;
+});
+
+gridColorInput.addEventListener("input", () => {
+  let titleMargin = document.querySelectorAll(".bingo-title");
+  titleMargin.forEach((title) => {
+    title.style.borderColor = gridColorInput.value;
+  });
+  
+  let cells = bingoGrid.querySelectorAll(".bingo-cell");
+  cells.forEach((cell) => {
+    cell.style.borderColor = gridColorInput.value;
+  });
+});
+
+fontColorInput.addEventListener("input", () => {
+  let cells = bingoGrid.querySelectorAll(".bingo-cell");
+  cells.forEach((cell) => {
+    cell.style.color = fontColorInput.value;
+  });
+});
+
+/* escolha do tamanho da fonte */
+let fontSizeSelect = document.getElementById("font-size");
+
+fontSizeSelect.addEventListener("change", () => {
+
+  let size;
+
+  if (fontSizeSelect.value === "small") {
+    size = "16px";
+  } else if (fontSizeSelect.value === "medium") {
+    size = "24px";
+  } else if (fontSizeSelect.value === "large") {
+    size = "32px";
+  }
+
+  let cells = bingoGrid.querySelectorAll(".bingo-cell");
+  cells.forEach((cell) => {
+    cell.style.fontSize = size;
+  });
+});
