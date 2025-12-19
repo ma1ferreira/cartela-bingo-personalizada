@@ -1,3 +1,13 @@
+/* titulo do bingo */
+let titleInput = document.getElementById("title-input");
+let bingoTitle = document.getElementById("bingo-title");
+
+titleInput.addEventListener("input", () => {
+    bingoTitle.textContent = titleInput.value || "título";
+});
+
+
+/* tamanho da grade do bingo */
 let bingoGrid = document.getElementById('bingo-grid');
 
 let gridSizeInputs = document.querySelectorAll(

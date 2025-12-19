@@ -36,23 +36,17 @@
     <main class="main-content">
 
         <section class="bingo-area">
-            <h1 class="bingo-title">título</h1>
+            <h1 class="bingo-title" id="bingo-title">título</h1>
 
             <div class="bingo-grid" id="bingo-grid" aria-label="Grade do bingo"></div>
 
-            <div class="bingo-actions">
-                <button type="button">download png</button>
-                <button type="button">download psd</button>
-                <button type="button" id="toggle-settings">configurações</button>
-            </div>
         </section>
 
         <aside class="settings-panel" id="settings-panel" aria-hidden="false">
-            <h2>configurações</h2>
             <form class="settings-form">
                 <div class="settings-form-options">
                 <label for="bingo-title">título:</label>
-                    <input class="bingo-title-input" type="text" id="bingo-title" name="bingo-title" placeholder="encontro anos 80">
+                    <input class="bingo-title-input" type="text" id="title-input" name="bingo-title" placeholder="encontro anos 80">
                 </div>
 
                 <div class="settings-form-options">
@@ -98,6 +92,13 @@
 
                 <button type="button" class="btn-reset">restaurar padrão acessível</button>
             </form>
+
+            <div class="bingo-actions">
+                <button type="button">download .png</button>
+                <button type="button">download .psd</button>
+                <button type="button">download .svg</button>
+            </div>
+
         </aside>
 
 
