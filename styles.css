@@ -72,6 +72,7 @@ main {
     width: 580px;
     height: 600px;
     margin-right: -100px;    
+    position: relative;
 }
 
 .bingo-title {
@@ -219,4 +220,71 @@ button {
     cursor: text;
     word-break: break-word;
     overflow: hidden;
+}
+
+/* stickers */
+
+.sticker {
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    width: 120px;
+    cursor: move;
+}
+
+.sticker img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    pointer-events: none;
+    user-select: none;
+}
+
+.sticker.selected {
+  outline: 2px dashed #2F4B5C;
+}
+
+.sticker-rotate {
+  position: absolute;
+  top: -28px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 18px;
+  height: 18px;
+  background: #2F4B5C;
+  border-radius: 50%;
+  cursor: grab;
+  z-index: 10;
+}
+
+.sticker-rotate::after {
+  content: "⟳";
+  color: white;
+  font-size: 12px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.sticker-resize {
+  position: absolute;
+  right: -8px;
+  bottom: -8px;
+  width: 14px;
+  height: 14px;
+  background: #2F4B5C;
+  cursor: nwse-resize;
+  border-radius: 3px;
+  z-index: 11;
+}
+
+.sticker-rotate,
+.sticker-resize {
+  display: none;
+}
+
+.sticker.selected .sticker-rotate,
+.sticker.selected .sticker-resize {
+  display: block;
 }
