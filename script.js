@@ -264,3 +264,41 @@ document.addEventListener("click", () => {
   selectedSticker = null;
 });
 
+/*botao de restaurar padrão*/
+let resetButton = document.querySelector(".btn-reset");
+
+function restoreAccessibleDefault() {
+
+  bingoArea.style.backgroundColor = "#ffffff"
+  bgColorInput.value = "#FFFFFF"
+  bgColorValue.textContent = "#FFFFFF"
+
+  gridColorInput.value = "#000000"
+  gridColorValue.textContent = "#000000"
+
+  let cells = bingoGrid.querySelectorAll(".bingo-cell");
+  cells.forEach(cell => {
+    cell.style.borderColor = "#000000"
+  });
+
+  document.querySelectorAll(".bingo-title").forEach(title => {
+    title.style.borderColor = "#000000"
+  });
+
+  fontColorInput.value = "#000000"
+  fontColorValue.textContent = "#000000"
+
+  cells.forEach(cell => {
+    cell.style.color = "#000000"
+  });
+  bingoTitle.style.color = "#000000"
+
+  fontSizeSelect.value = "medium"
+  applyFontSize(medium);
+
+  document.querySelectorAll(".sticker").forEach(sticker => sticker.remove());
+  selectedSticker = null;
+}
+
+resetButton.addEventListener("click", restoreAccessibleDefault);
+
