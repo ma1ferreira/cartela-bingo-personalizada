@@ -302,3 +302,18 @@ function restoreAccessibleDefault() {
 
 resetButton.addEventListener("click", restoreAccessibleDefault);
 
+/* donwload do bingo em png*/
+
+let downloadPngBtn = document.getElementById("download-png");
+
+downloadPngBtn.addEventListener("click", () => {
+  html2canvas(bingoArea, {
+    backgroundColor: null,
+    scale: 2
+  }).then(canvas => {
+    let link = document.createElement("a");
+    link.download = "bingo.png";
+    link.href = canvas.toDataURL("image/png");
+    link.click();
+  });
+});
