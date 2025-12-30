@@ -59,7 +59,7 @@ ul {
 }
 
     /*elemento pai: main*/ 
-main { 
+.main-content { 
     display: flex;
     justify-content: space-evenly; 
     align-items: center; 
@@ -71,7 +71,9 @@ main {
     background-color: white;
     width: 580px;
     height: 600px;
-    margin-right: -100px;    
+    margin-right: -100px;
+    margin-top: -8px;   
+    margin-bottom: -15px;
     position: relative;
 }
 
@@ -211,6 +213,7 @@ button {
 
 .bingo-cell {
     border: 2px solid #3d3d3d;
+    color: #2F4B5C;
     background-color: transparent;
     aspect-ratio: 1 / 1;
     display: flex;

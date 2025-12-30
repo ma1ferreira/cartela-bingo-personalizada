@@ -293,14 +293,12 @@ function restoreAccessibleDefault() {
   });
   bingoTitle.style.color = "#000000"
 
-  fontSizeSelect.value = "medium"
-  applyFontSize(medium);
-
   document.querySelectorAll(".sticker").forEach(sticker => sticker.remove());
   selectedSticker = null;
 }
 
 resetButton.addEventListener("click", restoreAccessibleDefault);
+
 
 /* donwload do bingo em png*/
 
@@ -311,9 +309,45 @@ downloadPngBtn.addEventListener("click", () => {
     backgroundColor: null,
     scale: 2
   }).then(canvas => {
+    let pngData = canvas.toDataURL("image/png");
+
     let link = document.createElement("a");
     link.download = "bingo.png";
-    link.href = canvas.toDataURL("image/png");
+    link.href = pngData
     link.click();
+  });
+});
+
+
+/* download do bingo em pdf*/
+
+let downloadPdfBtn = document.getElementById("download-pdf");
+
+downloadPdfBtn.addEventListener("click", () => {
+  html2canvas(bingoArea, {
+    scale: 2,
+    backgroundColor: "#ffffff"
+  }).then(canvas => {
+
+    let imgData = canvas.toDataURL("image/png");
+
+    let { jsPDF } = window.jspdf;
+
+    let pdf = new jsPDF({
+      orientation: "portrait",
+      unit: "px",
+      format: "a4"
+  });
+
+    let pageWidth = pdf.internal.pageSize.getWidth();
+    let pageHeight = pdf.internal.pageSize.getHeight();
+
+    let imgWidth = pageWidth;
+    let imgHeight = (canvas.height * imgWidth) / canvas.width;
+
+    let y = (pageHeight - imgHeight) / 2;
+
+    pdf.addImage(imgData, "PNG", 0, y, imgWidth, imgHeight);
+    pdf.save("bingo.pdf");
   });
 });
